@@ -10,12 +10,12 @@ Solaris | `pkgin install cairo pango pkg-config xproto renderproto kbproto xextp
 Windows | [Instructions on our wiki](https://github.com/Automattic/node-canvas/wiki/Installation---Windows)
 
 ```
-npm install node-echarts
+npm install @waye/node-echarts
 ```
 
 ### Usage
 ```javascript
-var node_echarts = require('node-echarts');
+var node_echarts = require('@waye/node-echarts');
 var config = {
     width: 500, // Image width, type is number.
     height: 500, // Image height, type is number.
