@@ -28,6 +28,5 @@ test('return buffer instead of write file', async (t) => {
     height: 500,
     option
   })
-
   t.is(data.length, testImage.length)
 })

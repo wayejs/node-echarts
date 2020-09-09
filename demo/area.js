@@ -1,5 +1,4 @@
 var node_echarts = require('../index.js');
-var path = require('path');
 
 var option = {
     title: {
@@ -40,7 +39,7 @@ var option = {
             type:'line',
             stack: '总量',
             areaStyle: {normal: {}},
-            data:[120, 132, 101, 134, 90, 230, 210]
+            data:[130, 132, 101, 134, 90, 230, 210]
         },
         {
             name:'联盟广告',

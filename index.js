@@ -1,7 +1,6 @@
-var echarts = require("echarts");
-var Canvas = require("canvas-prebuilt");
-var fs = require('fs');
-var path = require('path');
+const echarts = require("echarts");
+const { createCanvas, loadImage } = require("canvas");
+const fs = require('fs');
 
 
 /**
@@ -16,17 +15,14 @@ var path = require('path');
  *
  */
 module.exports = function (config) {
-    if (config.canvas) {
-        Canvas = config.canvas;
-    }
-
-    var ctx = new Canvas(128, 128);
+    const canvas = createCanvas(128, 128)
+    const ctx = canvas.getContext('2d')
     if (config.font) {
         ctx.font = config.font;
     }
 
     echarts.setCanvasCreator(function () {
-        return ctx;
+        return canvas;
     });
 
     var chart, option = {
@@ -58,7 +54,7 @@ module.exports = function (config) {
     config = Object.assign({}, defaultConfig, config)
 
     config.option.animation = false;
-    chart = echarts.init(new Canvas(parseInt(config.width, 10), parseInt(config.height, 10)));
+    chart = echarts.init(createCanvas(parseInt(config.width, 10), parseInt(config.height, 10)));
     chart.setOption(config.option);
     if (config.path) {
         try {
