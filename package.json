@@ -1,10 +1,11 @@
 {
-  "name": "@wayejs/node-echarts",
+  "name": "@waye/node-echarts",
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/ava index.test.js"
+    "test": "./node_modules/.bin/ava index.test.js",
+    "pub": "npm publish --registry=http://registry.npmjs.org --access=public"
   },
   "ava": {
     "require": [
@@ -13,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/suxiaoxin/node-echarts.git"
+    "url": "git+https://github.com/wayejs/node-echarts.git"
   },
-  "author": "",
+  "author": "lynzz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/suxiaoxin/node-echarts/issues"
+    "url": "https://github.com/wayejs/node-echarts/issues"
   },
-  "homepage": "https://github.com/suxiaoxin/node-echarts#readme",
+  "homepage": "https://github.com/wayejs/node-echarts#readme",
   "dependencies": {
     "ava": "2.x",
     "canvas": "^2.6.1",
